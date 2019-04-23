@@ -34,6 +34,11 @@
           >
             check
           </v-icon>
+          <v-icon
+            @click="deleteProject(project)"
+          >
+            delete
+          </v-icon>
         </v-flex>
       </v-layout>
     </div>
@@ -43,6 +48,7 @@
           placeholder="My project name..."
           @input="setNewProjectName"
           :value="newProjectName"
+          @keyup.enter="createProject"
         ></v-text-field>
       </v-flex>
       <v-flex xs-3 class="text-xs-right">
@@ -83,6 +89,7 @@ export default {
       'createProject',
       'fetchProjects',
       'saveProject',
+      'deleteProject',
     ]),
   },
 };

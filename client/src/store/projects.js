@@ -15,6 +15,12 @@ export default {
           commit('unsetEditMode', project);
         });
     },
+    deleteProject({ commit }, project) {
+      return HTTP().delete(`/v1/projects/${project.id}`)
+        .then(() => {
+          commit('removeProject', project);
+        });
+    },
     fetchProjects({ commit }) {
       return HTTP().get('/v1/projects')
         .then(({ data }) => {
@@ -50,6 +56,9 @@ export default {
     },
     unsetEditMode(state, project) {
       Vue.set(project, 'isEditMode', false);
+    },
+    removeProject(state, project) {
+      state.projects.splice(state.projects.indexOf(project), 1);
     },
   },
 };
