@@ -1,7 +1,11 @@
 <template>
   <v-layout row wrap>
     <v-flex xs-9 class="text-xs-left">
-      <span v-if="!isEditMode">
+      <slot></slot>
+      <span
+        @click="$emit('onClick')"
+        v-if="!isEditMode"
+      >
         {{ title }}
       </span>
       <v-text-field
