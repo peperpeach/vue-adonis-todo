@@ -1,7 +1,7 @@
 <template>
   <Panel title="Tasks">
     <div
-      class="task mt-2"
+      class="tasks mt-2"
       v-for="task in tasks"
       :key="task.id"
     >
@@ -12,7 +12,6 @@
           task,
           description: $event,
         })"
-        @onClick="taskClicked(task)"
         @onEdit="setEditMode(task)"
         @onSave="saveTask(task)"
         @onDelete="deleteTask(task)"

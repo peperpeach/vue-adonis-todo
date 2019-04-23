@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <v-layout>
-      <v-flex xs-4>
+      <v-flex xs4>
         <Projects></Projects>
       </v-flex>
 
-      <v-flex xs-8 class="pl-4" v-if="currentProject">
+      <v-flex xs8 class="pl-4" v-if="currentProject">
         <Tasks></Tasks>
       </v-flex>
     </v-layout>

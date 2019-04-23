@@ -5,7 +5,7 @@ import HTTP from '../http';
 export default {
   namespaced: true,
   state: {
-    Tasks: [],
+    tasks: [],
     newTaskName: null,
   },
   actions: {
