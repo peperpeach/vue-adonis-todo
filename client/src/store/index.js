@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import authentication from './authentication';
+import projects from './projects';
 
 Vue.use(Vuex);
 
@@ -11,6 +12,7 @@ export default new Vuex.Store({
   },
   modules: {
     authentication,
+    projects,
   },
   mutations: {
 

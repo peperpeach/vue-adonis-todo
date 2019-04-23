@@ -4,7 +4,7 @@
 const Model = use('Model')
 
 class Task extends Model {
-    project () {
+  project () {
 		return this.belongsTo('App/Models/Project')
 	}
 }
