@@ -14,5 +14,5 @@
 5. Run VueJS Client [client]
     $ npm run serve
 
-$ npm run serve [client]
-$ adonis serve --dev [server]
+$ npm run serve [client]  
+$ adonis serve --dev [server]  
